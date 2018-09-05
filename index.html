@@ -11,17 +11,20 @@
       font-size: 1.2em;
     }
   </style>
-  <title>Mochi clicker v0.0</title>
+  <title>Mochi kisser v0.0.1</title>
 </head>
 
 <body>
-  <h1>Mochi Clicker</h1>
+  <h1>Mochi kisser</h1>
   <div ng-controller="MochiController">
-    Dinero total: {{money}} <br> DPS: {{currentDps}}<br>
-    <button ng-click="getOneMoney();">Dame un dinero</button>
+    Besos totales: {{money | number:0}} <br> BPS: {{currentDps}}<br>
+    <button ng-click="getOneMoney();">Besar mochi</button>
+    <button ng-click="resetMoney();">Reset besos</button>
+    <button ng-click="greatlyIncreaseMoney();">Dar MUCHOS besos</button>
     <table>
-      <tr ng-repeat="item in mochis">
-        <td>{{$index}} Hi {{ item.name }} </td>
+      <tr><th>Nombre</th><th>Coste</th><th>Besos por segundo</th><th>Cantidad</th><th>Bps total</th><th>Comprar</th></tr>
+      <tr ng-repeat="item in filteredKissers();">
+        <td>{{ item.name }}</td><td>{{ item.cost }}</td><td>{{ item.dps }}</td><td>{{ item.cuantity }}</td><td>{{ item.totalDps }}</td><td><button ng-click="buyKisser($index);">¡Comprar 1!</button></td>
       </tr>
     </table>
   </div>
