@@ -16,15 +16,15 @@
 
 <body>
   <h1>Mochi kisser</h1>
-  <div ng-controller="MochiController as MuCC">
-    Besos totales: {{MuCC.money | number:0}} <br> BPS: {{MuCC.currentDps}}<br>
-    <button ng-click="MuCC.getOneMoney();">Besar mochi</button>
-    <button ng-click="MuCC.resetMoney();">Reset besos</button>
-    <button ng-click="MuCC.greatlyIncreaseMoney();">Dar MUCHOS besos</button>
+  <div ng-controller="MochiController as mc">
+    Besos totales: {{mc.getCurrentMoney() | number:0}} <br> BPS: {{mc.getCurrentDps()}}<br>
+    <button ng-click="mc.giveOneMoney();">Besar mochi</button>
+    <button ng-click="mc.resetMoney();">Reset besos</button>
+    <button ng-click="mc.greatlyIncreaseMoney();">Dar MUCHOS besos</button>
     <table>
       <tr><th>Nombre</th><th>Coste</th><th>Besos por segundo</th><th>Cantidad</th><th>Bps total</th><th>Comprar</th></tr>
-      <tr ng-repeat="item in MuCC.filteredKissers();">
-        <td>{{ item.name }}</td><td>{{ item.cost }}</td><td>{{ item.dps }}</td><td>{{ item.cuantity }}</td><td>{{ item.totalDps }}</td><td><button ng-click="MuCC.buyKisser($index);">¡Comprar 1!</button></td>
+      <tr ng-repeat="item in mc.getFilteredKissers();">
+        <td>{{ item.name }}</td><td>{{ item.cost }}</td><td>{{ item.dps }}</td><td>{{ item.cuantity }}</td><td>{{ item.totalDps }}</td><td><button ng-click="mc.buyKisser($index);">¡Comprar 1!</button></td>
       </tr>
     </table>
   </div>
