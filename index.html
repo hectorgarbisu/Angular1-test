@@ -2,29 +2,39 @@
 <html ng-app='MochiClicker'>
 
 <head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <meta charset="utf-8">
   <script src="angular.min.js"></script>
   <script src="app.js"></script>
   <script src="mochis.js"></script>
-  <style>
-    body {
-      font-size: 1.2em;
-    }
-  </style>
   <title>Mochi kisser v0.0.1</title>
 </head>
 
 <body>
-  <h1>Mochi kisser</h1>
-  <div ng-controller="MochiController as mc">
+  <div ng-app="Mochi Kisser" ng-cloak ng-controller="MochiController as mc" class="w3-card-2 w3-margin" style="max-width:800px;">
+    <header class="w3-container w3-light-grey w3-padding-16">
+      <h3>Mochi Kisser</h3>
+    </header>
     Besos totales: {{mc.getCurrentMoney() | number:0}} <br> BPS: {{mc.getCurrentDps()}}<br>
-    <button ng-click="mc.giveOneMoney();">Besar mochi</button>
-    <button ng-click="mc.resetMoney();">Reset besos</button>
-    <button ng-click="mc.greatlyIncreaseMoney();">Dar MUCHOS besos</button>
-    <table>
-      <tr><th>Nombre</th><th>Coste</th><th>Besos por segundo</th><th>Cantidad</th><th>Bps total</th><th>Comprar</th></tr>
-      <tr ng-repeat="item in mc.getFilteredKissers();">
-        <td>{{ item.name }}</td><td>{{ item.cost }}</td><td>{{ item.dps }}</td><td>{{ item.cuantity }}</td><td>{{ item.totalDps }}</td><td><button ng-click="mc.buyKisser($index);">¡Comprar 1!</button></td>
+    <button ng-click="mc.giveOneMoney();" class="w3-bar-item w3-button w3-pink">Besar mochi</button>
+    <button ng-click="mc.resetMoney();" class="w3-bar-item w3-button w3-black">Reset besos</button>
+    <button ng-click="mc.greatlyIncreaseMoney();" class="w3-bar-item w3-button w3-black">Dar MUCHOS besos</button>
+    <table class="w3-table-all">
+      <tr>
+        <th>Nombre</th>
+        <th>Coste</th>
+        <th>Besos por segundo</th>
+        <th>Cantidad</th>
+        <th>Bps total</th>
+        <th>Comprar</th>
+      </tr>
+      <tr ng-repeat="item in mc.getFilteredKissers();" class="w3-padding-16">
+        <td>{{ item.name }}</td>
+        <td>{{ item.cost }}</td>
+        <td>{{ item.dps }}</td>
+        <td>{{ item.cuantity }}</td>
+        <td>{{ item.totalDps }}</td>
+        <td><button ng-click="mc.buyKisser($index);" class="w3-btn w3-padding w3-pink">¡Comprar 1!</button></td>
       </tr>
     </table>
   </div>
