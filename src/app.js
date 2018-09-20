@@ -53,6 +53,7 @@
         kissers[index].cuantity += 1;
         kissers[index].totalDps += kissers[index].dps;
         currentDps += kissers[index].dps;
+        kissers[index].cost = kissers[index].cost*1.1;
       }
     };
     service.greatlyIncreaseMoney = function () {
@@ -61,7 +62,7 @@
     //Getters
     service.getFilteredKissers = function () {
       return kissers.filter(function (item) {
-        if (item.alreadyShown == 1 || item.cost < money) {
+        if (item.alreadyShown == 1 || item.cost < money*10) {
           item.alreadyShown = 1;
           return true;
         } else {
