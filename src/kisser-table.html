@@ -1,0 +1,18 @@
+ <table class="w3-table-all">
+      <tr>
+        <th>Nombre</th>
+        <th>Coste</th>
+        <th>Besos por segundo</th>
+        <th>Cantidad</th>
+        <th>Bps total</th>
+        <th>Comprar</th>
+      </tr>
+      <tr ng-repeat="item in $ctrl.getFilteredKissers();" class="w3-padding-16">
+        <td>{{ item.name }}</td>
+        <td>{{ item.cost | number:0 }}</td>
+        <td>{{ item.dps | number:0}}</td>
+        <td>{{ item.cuantity }}</td>
+        <td>{{ item.totalDps | number:0}}</td>
+        <td><button ng-click="$ctrl.buyKisser($index);" class="w3-btn w3-border w3-border-pink w3-round-large">¡Comprar 1!</button></td>
+      </tr>
+    </table>

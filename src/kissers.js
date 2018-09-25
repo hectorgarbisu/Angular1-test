@@ -1,4 +1,4 @@
-var initialKissers = [
+    var initialKissers = [
     {   "name" : "Besador básico",
         "cost" : 20,
         "dps" : 1,
