@@ -12,7 +12,7 @@ function KisserTableController(KissersListService) {
 };
 
 angular.module('MochiClicker').component('kisserTable', {
-    templateUrl: 'src/kisser-table.html',
+    templateUrl: 'src/templates/kisser-table.html',
     controller: KisserTableController
 });
 })();

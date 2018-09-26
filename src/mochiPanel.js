@@ -4,7 +4,7 @@ function MochiPanelController() {
   }
   
   angular.module('MochiClicker').component('mochiPanel', {
-    templateUrl: 'src/mochi-panel.html',
+    templateUrl: 'src/templates/mochi-panel.html',
     controller: MochiPanelController
   });
 })();

@@ -28,7 +28,7 @@ function ControlPanelController(KissersListService,$interval) {
 
 
 angular.module('MochiClicker').component('controlPanel', {
-    templateUrl: 'src/control-panel.html',
+    templateUrl: 'src/templates/control-panel.html',
     controller: ControlPanelController
 });
 })();
