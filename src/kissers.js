@@ -5,7 +5,7 @@
         "totalDps" : 0,
         "cuantity": 0,
         "alreadyShown" : 0,
-        "description" : ""
+        "description" : "",
     },
     {   "name" : "Besador no tan básico",
         "cost" : 200,
