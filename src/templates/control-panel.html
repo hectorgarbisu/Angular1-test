@@ -1,7 +1,7 @@
-<div>
+<div class="w3-card w3-pink mochi-control">
     Besos tot<span ng-click="$ctrl.toggleDebug()">a</span>les: {{ $ctrl.getCurrentMoney() | number:0 }} <br/>
     BPS: {{ $ctrl.getCurrentDps() }}<br/>
-<button ng-click="$ctrl.giveMoney(1);" class="w3-btn w3-border w3-border-pink w3-round-large">Besar mochi</button>
-<button ng-if="$ctrl.debug" ng-click="$ctrl.resetMoney();" class="w3-bar-item w3-button w3-black">Reset besos</button>
-<button ng-if="$ctrl.debug" ng-click="$ctrl.greatlyIncreaseMoney();" class="w3-bar-item w3-button w3-black">Dar MUCHOS besos</button>
 </div>
+<button ng-click="$ctrl.giveMoney(1);" class="w3-btn w3-border w3-border-pink w3-round-large mochi-button">Besar mochi</button>
+<button ng-if="$ctrl.debug" ng-click="$ctrl.resetMoney();" class="w3-button w3-black mochi-button  w3-border-white">Reset besos</button>
+<button ng-if="$ctrl.debug" ng-click="$ctrl.greatlyIncreaseMoney();" class="w3-button w3-black mochi-button  w3-border-white">Dar MUCHOS besos</button>

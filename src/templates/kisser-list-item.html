@@ -1,8 +1,5 @@
-<div class="w3-display-container w3-hover-opacity w3-padding-16 w3-card" style="width:50%">
+<div  class="w3-btn w3-border w3-border-pink w3-round-large mochi-button" ng-click="$ctrl.buyKisser($ctrl.idx);">
     {{ $ctrl.item.name }} ({{$ctrl.item.cuantity}}) <br />
     Cuesta: {{ $ctrl.item.cost | number:0 }} <br/>
     Besos por segundo: {{ $ctrl.item.dps | number:0}}
-    <div class="w3-display-middle w3-display-hover w3-xlarge">
-        <button ng-click="$ctrl.buyKisser($ctrl.idx);" class="w3-btn w3-border w3-border-pink w3-round-large">¡Comprar 1!</button>
-    </div>
 </div>
