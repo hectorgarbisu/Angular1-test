@@ -5,6 +5,9 @@ function ControlPanelController(KissersListService,$interval) {
     $ctrl.refreshPeriod = 50;
     $ctrl.debug = false
 
+    $ctrl.scrolled = function () {
+        return window.scrollY  > document.getElementById("stats").getBoundingClientRect().bottom;
+    }
     $ctrl.getCurrentMoney = function () {
         return KissersListService.getCurrentMoney();
     }

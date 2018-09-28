@@ -1,4 +1,4 @@
-<div class="w3-card w3-pink mochi-control">
+<div class="w3-card w3-pink mochi-control" ng-class="$ctrl.scrolled() ? 'mochi-control-fixed' : '' " id="stats">
     Besos tot<span ng-click="$ctrl.toggleDebug()">a</span>les: {{ $ctrl.getCurrentMoney() | number:0 }} <br/>
     BPS: {{ $ctrl.getCurrentDps() }}<br/>
 </div>

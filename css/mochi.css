@@ -3,6 +3,15 @@
     height: 90px
 }
 .mochi-control {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Cambria';
     font-size: 18px;
+    padding-left: 20px;
+}
+.mochi-control-fixed {
+    width: 24%;
+    min-width: 400px;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
 }
