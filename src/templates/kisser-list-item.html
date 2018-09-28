@@ -1,5 +1,5 @@
 <div  class="w3-btn w3-border w3-border-pink w3-round-large mochi-button" ng-click="$ctrl.buyKisser($ctrl.idx);">
     {{ $ctrl.item.name }} ({{$ctrl.item.cuantity}}) <br />
-    Cuesta: {{ $ctrl.item.cost | number:0 }} <br/>
+    <span ng-class="!$ctrl.canBuy()? '' : 'w3-text-pink' ">Cuesta: {{ $ctrl.item.cost | number:0 }} <br/></span>
     Besos por segundo: {{ $ctrl.item.dps | number:0}}
 </div>

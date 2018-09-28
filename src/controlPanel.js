@@ -1,12 +1,13 @@
 (function(){
-ControlPanelController.$inject = ['KissersListService','$interval'];
-function ControlPanelController(KissersListService,$interval) {
+ControlPanelController.$inject = ['KissersListService', '$interval', '$element'];
+function ControlPanelController(KissersListService, $interval, $element) {
     var $ctrl = this;
     $ctrl.refreshPeriod = 50;
     $ctrl.debug = false
 
     $ctrl.scrolled = function () {
-        return window.scrollY  > document.getElementById("stats").getBoundingClientRect().bottom;
+        var defaultPositionLowerBound = angular.element($element).prop('offsetTop') + angular.element($element).prop("offsetHeight") 
+        return window.scrollY  > defaultPositionLowerBound
     }
     $ctrl.getCurrentMoney = function () {
         return KissersListService.getCurrentMoney();

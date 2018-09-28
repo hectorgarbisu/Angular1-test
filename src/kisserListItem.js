@@ -6,6 +6,9 @@ function KisserListItemController(KissersListService) {
     $ctrl.buyKisser = function (idx){
         KissersListService.buyKisser(idx);
     }
+    $ctrl.canBuy = function(){
+        return $ctrl.item.cost > KissersListService.getCurrentMoney();
+    }
 };
 
 
