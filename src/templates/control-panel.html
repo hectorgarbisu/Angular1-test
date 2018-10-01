@@ -1,9 +1,18 @@
 <div>
-<div class="w3-card w3-pink mochi-control" ng-class="$ctrl.scrolled() ? 'mochi-control-fixed' : '' " id="stats">
-    Besos tot<span ng-click="$ctrl.toggleDebug()">a</span>les: {{ $ctrl.getCurrentMoney() | number:0 }} <br/>
-    BPS: {{ $ctrl.getCurrentDps() }}<br/>
-</div>
-<button ng-click="$ctrl.giveMoney(1);" class="w3-btn w3-border w3-border-pink w3-round-large mochi-button">Besar mochi</button>
-<button ng-if="$ctrl.debug" ng-click="$ctrl.resetMoney();" class="w3-button w3-black mochi-button  w3-border-white">Reset besos</button>
-<button ng-if="$ctrl.debug" ng-click="$ctrl.greatlyIncreaseMoney();" class="w3-button w3-black mochi-button  w3-border-white">Dar MUCHOS besos</button>
+    <div class="w3-card w3-pink mochi-control">
+        Besos tot<span ng-click="$ctrl.toggleDebug()">a</span>les: {{ $ctrl.getCurrentMoney() | number:0 }} <br />
+        BPS: {{ $ctrl.getCurrentDps() }}<br />
+    </div>
+    <div ng-if="$ctrl.isScrolled()" class="mochi-control-fixed-wrapper w3-quarter" >
+        <div class="w3-card w3-pink mochi-control mochi-control-fixed">
+            Besos totales: {{ $ctrl.getCurrentMoney() | number:0 }} <br />
+            BPS: {{ $ctrl.getCurrentDps() }}<br />
+        </div>
+    </div>
+    <button ng-click="$ctrl.giveMoney(1);" class="w3-btn w3-border w3-border-pink w3-round-large mochi-button">Besar
+        mochi</button>
+    <button ng-if="$ctrl.debug" ng-click="$ctrl.resetMoney();" class="w3-button w3-black mochi-button  w3-border-white">Reset
+        besos</button>
+    <button ng-if="$ctrl.debug" ng-click="$ctrl.greatlyIncreaseMoney();" class="w3-button w3-black mochi-button  w3-border-white">Dar
+        MUCHOS besos</button>
 </div>

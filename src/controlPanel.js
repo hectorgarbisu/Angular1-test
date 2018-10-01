@@ -5,7 +5,7 @@ function ControlPanelController(KissersListService, $interval, $element) {
     $ctrl.refreshPeriod = 50;
     $ctrl.debug = false
 
-    $ctrl.scrolled = function () {
+    $ctrl.isScrolled = function () {
         var defaultPositionLowerBound = angular.element($element).prop('offsetTop') + angular.element($element).prop("offsetHeight") 
         return window.scrollY  > defaultPositionLowerBound
     }

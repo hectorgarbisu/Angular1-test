@@ -3,15 +3,19 @@
     height: 90px
 }
 .mochi-control {
+    width: 100%;
     font-family: 'Verdana';
     font-size: 18px;
     padding-left: 20px;
 }
-.mochi-control-fixed {
-    width: 98%;
-    min-width: 300px;
-    border-radius: 10px;
-    margin-right: 80px;
+.mochi-control-fixed{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    opacity: 0.9;
+}
+.mochi-control-fixed-wrapper {
+    min-width: 350px;
+    padding-right: 32px;
     position: fixed;
     z-index: 1;
     top: 0;
